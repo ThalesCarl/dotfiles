@@ -34,4 +34,6 @@ inoremap <C-t> <Esc>:tabnew<CR>
 " fix to strange register bug
 unmap "
 
+" command for wipe the all the registers
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor])))
 
