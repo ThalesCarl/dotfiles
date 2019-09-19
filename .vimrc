@@ -4,7 +4,7 @@
 
 "Pathogen is a plugin manager 
 execute pathogen#infect()
-call pathogen#helptags()
+ call pathogen#helptags()
 
 set nocompatible              " be iMproved, required
 filetype plugin indent on
@@ -31,5 +31,7 @@ inoremap <C-h> <Esc>:tabprevious<CR>i
 inoremap <C-l> <Esc>:tabnext<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
 
+" fix to strange register bug
+unmap "
 
 
