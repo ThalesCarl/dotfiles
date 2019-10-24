@@ -37,3 +37,12 @@ unmap "
 " command for wipe the all the registers
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor])))
 
+"map <C-e> to jump to end of line on insert mode
+inoremap <C-e> <C-o>$
+
+"map <C-g> to jump to beginning of line on insert mode
+inoremap <C-g> <C-o>0
+
+" List contents of all registers (that typically contain pasteable text). 
+" https://superuser.com/questions/656949/always-show-the-register-list-in-vim/662063
+nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.<CR>

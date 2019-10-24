@@ -1,4 +1,3 @@
-# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -60,6 +59,7 @@ ZSH_THEME="bira"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,14 +100,23 @@ export PATH=$PATH:/home/thales/apps/
 export PATH=$PATH:/home/thales/apps/ansys_inc/v190/fluent/bin/
 export PATH=$PATH:/home/thales/apps/WebPlotDigitizer-linux-x64/
 export PATH=$PATH:/home/thales/apps/ansys_inc/v190/Framework/bin/Linux64/
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/thales/apps/ansys_inc/v190/icemcfd/linux64_amd/bin/:/home/thales/apps/:/home/thales/apps/ansys_inc/v190/fluent/bin/:/home/thales/apps/WebPlotDigitizer-linux-x64/:/home/thales/apps/ansys_inc/v190/Framework/bin/Linux64/:/home/thales/.vimpkg/bin"
+export PATH=$PATH:/sbin/
+export PATH=$PATH:/home/thales/apps/petsc/arch-linux2-c-debug/bin/
+#export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/thales/apps/ansys_inc/v190/icemcfd/linux64_amd/bin/:/home/thales/apps/:/home/thales/apps/ansys_inc/v190/fluent/bin/:/home/thales/apps/WebPlotDigitizer-linux-x64/:/home/thales/apps/ansys_inc/v190/Framework/bin/Linux64/:/home/thales/.vimpkg/bin"
+export PETSC_DIR="/home/thales/apps/petsc"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HOME}/local/lib
 
 alias aps='apt-cache search'
 alias api='sudo apt-get install'
+alias apf='sudo apt-get install -f'
 alias apr='sudo apt-get remove'
 alias apu='sudo apt-get update'
 alias apg='sudo apt-get upgrade'
 alias cm='clear & make'
+alias envSearch='printenv | grep '
+alias tccToDropbox='git archive --format=tar HEAD | (cd ~/Dropbox/TCC_Thales/; tar -xpf -)'
+
+alias ..zshrc='source ~/.zshrc'
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
