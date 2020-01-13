@@ -7,18 +7,19 @@ Add shortcut Ctrl Alt T to xfce4-terminal (Settings -> Keyboard)
 Install (command line programs):
 git
 vim
-zsh
+zsh (after install, run: chsh -s /usr/bin/zsh thales)
 oh-my-zsh 
-pathogen
+pathogen (create .vim autoload/pathogen.vim bundle)
 nerdtree
 ctrlp
 tmux (Edit -> Preferences -> Run custom command ...: tmux)
-oh-my-tmux 
+oh-my-tmux
 
 Install (other programs):
 synapse (run with startup)
 paraview
-spyder
+spyder (python2)
+spyder3 (python3)
 wps-office
 texmaker
 chrome to linux
