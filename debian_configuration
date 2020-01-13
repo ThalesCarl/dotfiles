@@ -2,6 +2,8 @@ What to do to configure debian the way I like
 
 Add thales	ALL=(ALL:ALL) ALL to /etc/sudoers
 
+Add shortcut Ctrl Alt T to xfce4-terminal (Settings -> Keyboard)
+
 Install (command line programs):
 git
 vim
@@ -14,6 +16,7 @@ tmux (Edit -> Preferences -> Run custom command ...: tmux)
 oh-my-tmux 
 
 Install (other programs):
+synapse (run with startup)
 paraview
 spyder
 wps-office
