@@ -1,0 +1,22 @@
+What to do to configure debian the way I like
+
+Add thales	ALL=(ALL:ALL) ALL to /etc/sudoers
+
+Install (command line programs):
+git
+vim
+zsh
+oh-my-zsh 
+pathogen
+nerdtree
+ctrlp
+tmux (Edit -> Preferences -> Run custom command ...: tmux)
+oh-my-tmux 
+
+Install (other programs):
+paraview
+spyder
+wps-office
+texmaker
+chrome to linux
+dropbox
