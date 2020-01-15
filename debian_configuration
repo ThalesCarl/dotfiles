@@ -4,7 +4,10 @@ Add thales	ALL=(ALL:ALL) ALL to /etc/sudoers
 
 Add shortcut Ctrl Alt T to xfce4-terminal (Settings -> Keyboard)
 
+Add "setxkbmap -option caps:swapescape" to ~/.profile or to Session Start up
+
 Install (command line programs):
+htop
 git
 vim
 zsh (after install, run: chsh -s /usr/bin/zsh thales)
@@ -24,3 +27,5 @@ wps-office
 texmaker
 chrome to linux
 dropbox
+Mendeley
+Anki
