@@ -4,12 +4,10 @@
 
 "Pathogen is a plugin manager 
 execute pathogen#infect()
- call pathogen#helptags()
-
+call pathogen#helptags()
 set nocompatible              " be iMproved, required
 filetype plugin indent on
 
-map <silent> <C-n> :NERDTreeToggle<CR> 
 set number relativenumber nowrap
 filetype plugin on
 syntax on
@@ -30,6 +28,10 @@ nnoremap <C-t> :tabnew<CR>
 inoremap <C-h> <Esc>:tabprevious<CR>i
 inoremap <C-l> <Esc>:tabnext<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
+
+"NERDTree configuration
+map <silent> <C-n> :NERDTreeToggle<CR> 
+let NERDTreeIgnore = ['\.pyc$','\.vts$','\.dat$','\.dat.info$','\.o$']
 
 " show white spaces with a dot, like spyder, Cedric Simon's idea
 set lcs+=space:·
@@ -52,3 +54,27 @@ source /home/thales/.vim/matrix.vim
 " List contents of all registers (that typically contain pasteable text). 
 " https://superuser.com/questions/656949/always-show-the-register-list-in-vim/662063
 nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.<CR>
+
+"Syntastic noob configuration:
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = 'python'
+" let g:syntastic_python_checkers = ['python']
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticToggleMode<CR> \| :SyntasticCheck<CR>
+
+"Neomake
+autocmd! BufReadPost,BufWritePost * Neomake
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
+
+"Highlight current line and column
+:hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorcolumn! <CR>
+set cursorline
