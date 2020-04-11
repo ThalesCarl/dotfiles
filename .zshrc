@@ -108,8 +108,11 @@ alias apg='sudo apt-get upgrade'
 alias cm='clear & make'
 alias envSearch='printenv | grep '
 alias tccToDropbox='git archive --format=tar HEAD | (cd ~/Dropbox/TCC_Thales/; tar -xpf -)'
-
 alias ..zshrc='source ~/.zshrc'
+alias rmv='rm -v'
+alias cpv='cp -v'
+alias mvv='mv -v'
+
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
