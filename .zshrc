@@ -95,14 +95,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Thales' Edits
 #
-export PATH=$PATH:/home/thales/apps/ansys_inc/v190/icemcfd/linux64_amd/bin/
-export PATH=$PATH:/home/thales/apps/
-export PATH=$PATH:/home/thales/apps/ansys_inc/v190/fluent/bin/
-export PATH=$PATH:/home/thales/apps/WebPlotDigitizer-linux-x64/
-export PATH=$PATH:/home/thales/apps/ansys_inc/v190/Framework/bin/Linux64/
 export PATH=$PATH:/sbin/
-export PATH=$PATH:/home/thales/apps/petsc/arch-linux2-c-debug/bin/
-#export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/thales/apps/ansys_inc/v190/icemcfd/linux64_amd/bin/:/home/thales/apps/:/home/thales/apps/ansys_inc/v190/fluent/bin/:/home/thales/apps/WebPlotDigitizer-linux-x64/:/home/thales/apps/ansys_inc/v190/Framework/bin/Linux64/:/home/thales/.vimpkg/bin"
 export PETSC_DIR="/home/thales/apps/petsc"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HOME}/local/lib
 
