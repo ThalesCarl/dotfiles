@@ -12,11 +12,14 @@ git
 vim
 zsh (after install, run: chsh -s /usr/bin/zsh thales)
 oh-my-zsh 
-pathogen (create .vim autoload/pathogen.vim bundle)
-nerdtree
-ctrlp
 tmux (Edit -> Preferences -> Run custom command ...: tmux)
 oh-my-tmux
+pathogen (create .vim autoload/pathogen.vim bundle)
+
+Vim plugins
+nerdtree
+ctrlp
+lightline
 
 Install (other programs):
 synapse (run with startup)
