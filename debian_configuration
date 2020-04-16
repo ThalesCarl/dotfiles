@@ -20,9 +20,12 @@ Vim plugins
 nerdtree
 ctrlp
 lightline
+tpope/fugitive
+tpope/comment (i didnt used it so far)
+eskk (japanese input dic)
 
 Install (other programs):
-synapse (run with startup)
+synapse (run with startup) or albert
 paraview
 spyder (python2)
 spyder3 (python3)
