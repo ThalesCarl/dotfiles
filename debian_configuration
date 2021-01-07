@@ -27,6 +27,7 @@ tpope/comment (i didnt used it so far)
 eskk (japanese input dic)
 
 Install (other programs):
+lightdm-gtk-greeter-settings
 synapse (run with startup) or albert
 paraview
 spyder (python2)
