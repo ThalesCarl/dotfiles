@@ -17,6 +17,8 @@ tmux (Edit -> Preferences -> Run custom command ...: tmux) (
 oh-my-tmux
 tmux-ressurect
 pathogen (create .vim autoload/pathogen.vim bundle)
+cmatrix
+ncdu
 
 Vim plugins
 nerdtree
