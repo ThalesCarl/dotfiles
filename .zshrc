@@ -65,6 +65,7 @@ ZSH_THEME="bira"
 plugins=(
   git
   zsh-autosuggestions
+  zsh-z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -133,7 +134,6 @@ alias wifiOn="nmcli radio wifi on"
 alias vsh='vim ~/.zshrc'
 alias ..zshrc="source ~/.zshrc"
 
-. /home/thales/apps/z/z.sh
 
 # open neovim instead of oldvim
 if type nvim > /dev/null 2>&1; then
