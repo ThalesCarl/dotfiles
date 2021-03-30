@@ -8,14 +8,13 @@ call pathogen#helptags()
 set nocompatible              " be iMproved, required
 filetype plugin indent on
 
-set number relativenumber nowrap
+set number relativenumber nowrap list
 filetype plugin on
 syntax on
 
 "Autocomplete brackets
  noremap " ""<left>
 inoremap ' ''<left>
-inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
@@ -33,14 +32,14 @@ inoremap <C-t> <Esc>:tabnew<CR>
 map <silent> <C-n> :NERDTreeToggle<CR> 
 let NERDTreeIgnore = ['\.pyc$','\.vts$','\.dat$','\.dat.info$','\.o$']
 
-" show white spaces with a dot, like spyder, Cedric Simon's idea
-set lcs+=space:·
-
 " fix to a strange register bug
 unmap "
 
 " command for wipe the all the registers
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor])))
+
+"map to clear highlight
+nnoremap <Leader><space> :noh<cr>
 
 "map <C-e> to jump to end of line on insert mode
 inoremap <C-e> <C-o>$
@@ -56,25 +55,39 @@ source /home/thales/.vim/matrix.vim
 nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.<CR>
 
 "Syntastic noob configuration:
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = 'python'
-" let g:syntastic_python_checkers = ['python']
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <C-w>E :SyntasticToggleMode<CR> \| :SyntasticCheck<CR>
-
-"Neomake
-autocmd! BufReadPost,BufWritePost * Neomake
-let g:neomake_serialize = 1
-let g:neomake_serialize_abort_on_error = 1
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_python_python_exec = 'python'
+"" let g:syntastic_python_checkers = ['python']
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+"nnoremap <C-w>E :SyntasticToggleMode<CR> \| :SyntasticCheck<CR>
+"
+""Neomake
+"autocmd! BufReadPost,BufWritePost * Neomake
+"let g:neomake_serialize = 1
+"let g:neomake_serialize_abort_on_error = 1
 
 "Highlight current line and column
 :hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>c :set cursorcolumn! <CR>
 set cursorline
+
+" Lightline config
+set laststatus=2
+
+" Shortcut to :w
+noremap <Leader>s :update<CR>
+
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=4
+set softtabstop=4
+" " when indenting with '>', use 2 spaces width
+set shiftwidth=4
