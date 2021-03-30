@@ -47,8 +47,6 @@ inoremap <C-e> <C-o>$
 "map <C-g> to jump to beginning of line on insert mode
 inoremap <C-g> <C-o>0
 
-"Just a funny screensaver
-source /home/thales/.vim/matrix.vim
 
 " List contents of all registers (that typically contain pasteable text). 
 " https://superuser.com/questions/656949/always-show-the-register-list-in-vim/662063
