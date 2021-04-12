@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/thales/.vimpkg/bin"
 export PATH=$PATH:/sbin/
+export PATH=$PATH:/snap/bin/
 export PATH=$PATH:/home/thales/.local/bin/
 export PETSC_DIR=/home/thales/apps/petsc/petsc-3.11.4/
 export PETSC_ARCH=debug
