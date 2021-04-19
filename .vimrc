@@ -70,6 +70,9 @@ nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.<CR>
 "let g:neomake_serialize = 1
 "let g:neomake_serialize_abort_on_error = 1
 
+" Set mouse mode
+set mouse=a
+
 "Highlight current line and column
 :hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkred guifg=white
