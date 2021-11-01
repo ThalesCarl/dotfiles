@@ -103,6 +103,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/thal
 export PATH=$PATH:/sbin/
 export PATH=$PATH:/snap/bin/
 export PATH=$PATH:/home/thales/.local/bin/
+export PATH=$PATH:/home/thales/Apps/kafka/kafka_2.12-2.7.0/bin/
 export PETSC_DIR=/home/thales/apps/petsc/petsc-3.11.4/
 export PETSC_ARCH=debug
 
@@ -113,6 +114,7 @@ alias apf='sudo apt-get install -f'
 alias apr='sudo apt-get remove'
 alias apu='sudo apt-get update'
 alias apg='sudo apt-get upgrade'
+alias dpkgi='sudo dpkg -i'
 alias cm='clear & make'
 alias envSearch='printenv | grep '
 alias tccToDropbox='git archive --format=tar HEAD | (cd ~/Dropbox/TCC_Thales/; tar -xvpf -)'
@@ -134,8 +136,10 @@ alias wifiOn="nmcli radio wifi on"
 
 alias vsh='vim ~/.zshrc'
 alias ..zshrc="source ~/.zshrc"
+alias alert='paplay /usr/share/sounds/gnome/default/alerts/drip.ogg'
 
 
+unalias gcp
 # open neovim instead of oldvim
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
@@ -146,3 +150,20 @@ autoload -U edit-command-line
 zle -N edit-command-line 
 bindkey -M vicmd v edit-command-line
 
+# open a bash terminal inside a docker container
+dbash () {
+    docker exec -it $1 bash
+}
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias drmi='docker rmi'
+alias drm='docker rm'
+alias dbuild='docker build'
+alias drun='docker run'
+alias dimages='docker images'
+alias dimage='docker image'
+alias dcstop='docker container stop'
+alias dcrm='docker container rm'
+alias drminone='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+
+#alias dockprune48='docker image prune --all --filter "until=4320h"'
