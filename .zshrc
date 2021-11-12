@@ -154,6 +154,7 @@ bindkey -M vicmd v edit-command-line
 dbash () {
     docker exec -it $1 bash
 }
+
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias drmi='docker rmi'
@@ -165,5 +166,8 @@ alias dimage='docker image'
 alias dcstop='docker container stop'
 alias dcrm='docker container rm'
 alias drminone='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+ddall () {
+    dcstop $1 && dcrm $1 
+}
 
 #alias dockprune48='docker image prune --all --filter "until=4320h"'
