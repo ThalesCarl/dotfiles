@@ -8,7 +8,7 @@ call pathogen#helptags()
 set nocompatible              " be iMproved, required
 filetype plugin indent on
 
-set number relativenumber nowrap list
+set number relativenumber nowrap 
 filetype plugin on
 syntax on
 
