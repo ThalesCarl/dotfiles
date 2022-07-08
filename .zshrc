@@ -66,6 +66,8 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-z
+  vscode
+  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,6 +105,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/thal
 export PATH=$PATH:/sbin/
 export PATH=$PATH:/snap/bin/
 export PATH=$PATH:/home/thales/.local/bin/
+export PATH=$PATH:/usr/local/go/bin/
 export PATH=$PATH:/home/thales/Apps/kafka/kafka_2.12-2.7.0/bin/
 export PETSC_DIR=/home/thales/apps/petsc/petsc-3.11.4/
 export PETSC_ARCH=debug
@@ -156,6 +159,16 @@ dbash () {
     docker exec -it $1 bash
 }
 
+# search history
+shis () {
+   history | grep $1
+}
+
+# open vscode and close terminal
+xvsc () {
+	code $1 && exit
+}
+
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias drmi='docker rmi'
@@ -164,6 +177,8 @@ alias dbuild='docker build'
 alias drun='docker run'
 alias dimages='docker images'
 alias dimage='docker image'
+alias dkill='docker kill'
+alias dstart='docker start'
 alias dcstop='docker container stop'
 alias dcrm='docker container rm'
 alias drminone='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
